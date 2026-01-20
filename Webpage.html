@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Hydro-App - 水耕栽培アプライアンス</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+</style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header id="header">
+       
+
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>San</span>Hydro-App
+            </a>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#home" class="nav-link" data-en="Home" data-jp="ホーム">ホーム</a>
+                <a href="#about" class="nav-link" data-en="About" data-jp="製品紹介">製品紹介</a>
+                <a href="#feat" class="nav-link" data-en="Specifications" data-jp="仕様">仕様</a>
+                <a href="#faq" class="nav-link" data-en="FAQ" data-jp="よくある質問">よくある質問</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-jp="お問い合わせ">お問い合わせ</a>
+                <div class="lang-toggle">
+                    <button class="lang-btn active" id="langJp">JP</button>
+                    <button class="lang-btn" id="langEn">EN</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section or the Main page -->
+    <section class="hero" id="home">
+        <!-- Floating Background -->
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="language-text" data-en="Perfect solution for modern home gardening" data-jp="安全で健康的な環境で、新鮮で化学物質不使用の野菜を育てる楽しみを！">
+                    安全で健康的な環境で、新鮮で化学物質不使用の野菜を育てる楽しみを！
+                </h1>
+                <p class="language-text" data-en="Through our hydroponic appliance, we deliver safe and reliable vegetables, along with the joy of experiencing the growing process." data-jp="私たちの水耕栽培アプライアンスを通じて、安全で信頼できる野菜と、成長過程を体験する喜びをお届けします。">
+                    私たちの水耕栽培アプライアンスを通じて、安全で信頼できる野菜と、成長過程を体験する喜びをお届けします。
+                </p>
+                <div class="hero-actions">
+                    <a href="#video" class="btn btn-primary">
+                        <i class="fa-solid fa-circle-play"></i> <span class="language-text" data-en="Watch Video" data-jp="ビデオを見る">ビデオを見る</span>
+                    </a>
+                    <a href="#feat" class="btn btn-secondary">
+                        <i class="fa-regular fa-eye"></i> <span class="language-text" data-en="View Specifications" data-jp="仕様を見る">仕様を見る</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Images/Picture1.png" alt="水耕栽培システム" id="floatImage">
+                <img src="Images/SanDisk.png" alt="SanDisk" id="sandisk">
+            </div>
+        </div>
+    </section>
+
+     <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="Images/AboutImage.png" alt="水耕栽培">
+            </div>
+            <div class="about-content">
+                <span style="color: #04928F; font-weight: 600;"> <i class="fas fa-seedling"></i> About San Hydro App</span>
+                <h2><span class="language-text" data-en=" Hydroponic cultivation" data-jp="San Hydroアプライアンスについて">San Hydroアプライアンスについて</span></h2>
+                <p class="language-text" data-en="Hydroponic cultivation is a method of growing plants without using soil, and various features are required to promote efficient growth. There are necessary features for a hydroponic cultivation device to support the essential elements for growing plants to be healthy. Different variety of vegetables can be planted on the hydroponic chambers." data-jp="水耕栽培は土を使わずに植物を育てる方法で、効率的な成長を促進するためにさまざまな機能が必要です。植物が健康に育つために必要な要素をサポートする水耕栽培装置には、必要な機能があります。水耕栽培チャンバーにはさまざまな種類の野菜を植えることができます。">
+                    水耕栽培は土を使わずに植物を育てる方法で、効率的な成長を促進するためにさまざまな機能が必要です。植物が健康に育つために必要な要素をサポートする水耕栽培装置には、必要な機能があります。水耕栽培チャンバーにはさまざまな種類の野菜を植えることができます。
+                </p>
+             <hr style="margin-bottom: 1.5em; border: 1px solid #e2e8f0;">
+                <i class="fa-solid fa-leaf" style="position: absolute; color: #04928F; transform: scale(3); top: 10%; right: 10%;"></i>
+                <i class="fa-solid fa-leaf" style="position: absolute; color: #04928F; transform: scale(3) rotate(200deg); bottom: 10%; left: 10%;"></i>
+            </div>
+        </div>
+        <div class="container" style="padding-top: 1em;">
+             <img src="Images/VegetablesV2.png" alt="栽培可能な野菜" width="100%">
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <div class="Products" style="padding: 100px  0;">
+        <div class="container">
+            <div class="" style="text-align: center; margin-bottom: 70px; ">
+                 <span style="color: #04928F; font-weight: 600; "><i class="fas fa-seedling"></i>  San Hydro App chambers</span>
+                 <h2 style="font-size: 36px; margin-bottom: .3em;">Our Products Offers</h2>
+                 <div class="lines"></div>
+            </div>
+
+
+             <div class="popular col-3">
+               <div class="popular__card">
+                  <div class="popular__console"></div>
+                  <img src="Images/SideImage.png" alt=""/>
+                  <div class="popular__details">
+                     <h1 class="fs-700">Shibakawa</h1>
+                    
+                     <span class="fs-850 fw-bold"
+                        >19.90
+                        <sup class="txt-secondary fw-semi-bold fs-500"
+                           >$</sup
+                        ></span
+                     >
+                  </div>
+               </div>
+
+               <div class="popular__card">
+                  <div class="popular__console"></div>
+                  <img src="Images/SideImage.png" alt=""  />
+                  <div class="popular__details">
+                     <h1 class="fs-700">Nuppon</h1>
+                    
+                     <span class="fs-850 fw-bold"
+                        >19.90
+                        <sup class="txt-secondary fw-semi-bold fs-500"
+                           >$</sup
+                        ></span
+                     >
+                  </div>
+               </div>
+
+               <div class="popular__card">
+                  <div class="popular__console"></div>
+                  <img src="Images/SideImage.png" alt=""  />
+                  <div class="popular__details">
+                     <h1 class="fs-700">Standard Slim Type</h1>
+                    
+                     <span class="fs-850 fw-bold"
+                        >19.90
+                        <sup class="txt-secondary fw-semi-bold fs-500"
+                           >$</sup
+                        ></span
+                     >
+                  </div>
+               </div>
+             
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Chamber design Section -->
+    <div class="Chambers" style="padding: 100px 0; background-color: #fff;">
+        <div class="container">
+            <div class="" style="text-align: center; margin-bottom: 70px; ">
+                 <span style="color: #04928F; font-weight: 600;"><i class="fas fa-seedling"></i>  San Hydro App chambers</span>
+                 <h2 style="font-size: 36px; margin-bottom: .3em;">Design of the Chamber</h2>
+                 <div class="lines"></div>
+            </div>
+
+            <img src="Images/Chamber.png" width="100%" alt="チャンバーデザイン"/>
+        </div>
+    </div>
+
+    <!-- Features/Specification Section -->
+    <section class="Sanfeature" id="feat" style="padding: 100px 0;">
+        <img src="Images/green-tea.png" alt="" id="leafimage">
+        <div class="container">
+            <div class="" style="text-align: center; margin-bottom: 70px; ">
+                 <span style="color: #04928F; font-weight: 600;"><i class="fas fa-seedling"></i> San Hydro App chambers</span>
+                 <h2 style="font-size: 36px;">Most features</h2>
+                 <div class="section-subtitle language-text" data-en="Discover the powerful features that make San Hydro-App the perfect solution for modern home gardening" data-jp="San Hydro-Appを現代の家庭菜園に最適なソリューションにする強力な機能をご覧ください">
+                        San Hydro-Appを現代の家庭菜園に最適なソリューションにする強力な機能をご覧ください
+                 </div>
+            </div>
+
+
+            
+            <div class="parent">
+                <div class="div1">
+                    <div class="feature_content"> 
+                        <img src="Images/GrowLigt.png" alt="LED栽培ライト" width="60%">
+                        <h4 class="language-text" data-en="LED Grow Lights" data-jp="LED栽培ライト">LED栽培ライト</h4>
+                        <p class="language-text" data-en="Grow lights provide the artificial light source necessary for photosynthesis, enabling plants to thrive and produce crops even in indoor environments or areas with limited natural light." data-jp="栽培ライトは光合成に必要な人工光源を提供し、屋内環境や自然光が限られた場所でも植物が繁茂し作物を生産できるようにします。">
+                            栽培ライトは光合成に必要な人工光源を提供し、屋内環境や自然光が限られた場所でも植物が繁茂し作物を生産できるようにします。
+                        </p>
+                    </div>
+                </div>
+                <div class="div2">
+                    <div class="feature_circle"></div>
+                    <div class="feature_imagecontent">
+                        <img src="Images/features1.png" alt="San Hydro機能">
+                    </div>
+                </div>
+                <div class="div3">
+                    <div class="feature_content"> 
+                        <img src="Images/SanAce.png" alt="San Ace冷却ファン" width="40%">
+                        <h4 class="language-text" data-en="San Ace Cooling Fan" data-jp="San Ace冷却ファン">San Ace冷却ファン</h4>
+                        <p class="language-text" data-en="Air flow circulation in hydroponics systems serves multiple crucial purposes, primarily focused on optimizing plant growth and health." data-jp="水耕栽培システムでの気流循環は、主に植物の成長と健康を最適化することに焦点を当てた、複数の重要な目的を果たします。">
+                            水耕栽培システムでの気流循環は、主に植物の成長と健康を最適化することに焦点を当てた、複数の重要な目的を果たします。
+                        </p>
+                    </div>
+                </div>
+                <div class="div4">
+                    <div class="feature_content"> 
+                        <img src="Images/WaterNutrients.png" alt="栄養入り水" width="60%">
+                        <h4 class="language-text" data-en="Water with Nutrients" data-jp="栄養入り水">栄養入り水</h4>
+                        <p class="language-text" data-en="Water circulation serves the vital purpose of providing plants with a consistent supply of nutrients and oxygen, crucial for root health and growth." data-jp="水循環は、植物に栄養素と酸素を一貫して供給するという重要な目的を果たし、根の健康と成長に不可欠です。">
+                            水循環は、植物に栄養素と酸素を一貫して供給するという重要な目的を果たし、根の健康と成長に不可欠です。
+                        </p>
+                    </div>
+                </div>
+                <div class="div7">
+                    <div class="feature_content"> 
+                        <img src="Images/PHMeter.png" alt="pHとECメーター" width="70%">
+                        <h4 class="language-text" data-en="pH and EC Meter" data-jp="pH・ECメーター">pH・ECメーター</h4>
+                        <p class="language-text" data-en="EC (electrical conductivity) management: Managing the concentration (EC) of the nutrient solution leads to the health of the plants." data-jp="EC（電気伝導率）管理：栄養液の濃度（EC）を管理することで植物の健康につながります。">
+                            EC（電気伝導率）管理：栄養液の濃度（EC）を管理することで植物の健康につながります。
+                        </p>
+                        <p class="language-text" data-en="Nutrient management: In hydroponic cultivation, a 'nutrient solution' in which nutrients are dissolved in water is used instead of soil." data-jp="栄養管理：水耕栽培では、土の代わりに栄養素を水に溶かした「栄養液」を使用します。">
+                            栄養管理：水耕栽培では、土の代わりに栄養素を水に溶かした「栄養液」を使用します。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <i class="fa-solid fa-leaf" style="position: absolute; color: #23af85; transform: scale(3); top: 10%; right: 20%;"></i>
+            <i class="fa-solid fa-leaf" style="position: absolute; color: #23af85; transform: scale(3) rotate(200deg); bottom: 10%; left: 15%;"></i>
+        </div>
+    </section>
+
+    <!-- Product Specification Section -->
+    <section class="features section " id="feat" style="background-color: #fff;">
+        <div class="container">
+             <div class="" style="text-align: center; margin-bottom: 70px; ">
+                 <span style="color: #04928F; font-weight: 600; "><i class="fas fa-seedling"></i>  San Hydro App chambers</span>
+                 <h2 style="font-size: 36px; margin-bottom: .3em;"><span class="language-text" data-en="Product Specification" data-jp="製品仕様">製品仕様</span></h2>
+                 <div class="lines"></div>
+         </div>
+
+        <div class="features__container grid">
+            <div class="specifc__image">
+                <img src="Images/Picture1.png" alt="水耕栽培野菜" class="features__imgcon" />
+            </div>
+            <div class="features__data">
+                <div class="ListProduct">
+                    <h3 class="language-text" data-en="1. Basic Information" data-jp="1. 基本情報">1. 基本情報</h3>
+                    <ul>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Product Name:" data-jp="製品名：">製品名：</label> San Hydro-App</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Model Number:" data-jp="モデル番号：">モデル番号：</label> XF-P07446</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="HS Code:" data-jp="HSコード：">HSコード：</label> 8436.80</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Manufacturer:" data-jp="製造元：">製造元：</label> Sanyo Denki Philippines, Inc.</li>
+                    </ul>
+                </div>
+
+                <div class="ListProduct">
+                    <h3 class="language-text" data-en="2. Technical Specifications" data-jp="2. 技術仕様">2. 技術仕様</h3>
+                    <ul>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Dimensions:" data-jp="寸法：">寸法：</label> W60cm × D140cm × H160cm</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Weight:" data-jp="重量：">重量：</label> 約61kg</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Power Supply:" data-jp="電源：">電源：</label> AC100–240V</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Power Consumption:" data-jp="消費電力：">消費電力：</label> 0.287 kWh</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="LED Lighting:" data-jp="LED照明：">LED照明：</label> フルスペクトルLED</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Planting Capacity:" data-jp="栽培容量：">栽培容量：</label> 最大90株</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Water Tank Capacity:" data-jp="水タンク容量：">水タンク容量：</label> 60リットル</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Pump:" data-jp="ポンプ：">ポンプ：</label> 静音循環ポンプ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="features__container left grid">
+            <div class="features__data">
+                <div class="ListProduct">
+                    <h3 class="language-text" data-en="4. Material Composition" data-jp="4. 材料構成">4. 材料構成</h3>
+                    <ul>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Main Body:" data-jp="本体：">本体：</label> 黒色コーティング金属パイプ</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Water Pipe and Channel:" data-jp="水管とチャネル：">水管とチャネル：</label> PVC（ポリ塩化ビニル）</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Water Tank:" data-jp="水タンク：">水タンク：</label> スチレン</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Body Cover:" data-jp="ボディカバー：">ボディカバー：</label> プラスチックビニール</li>
+                    </ul>
+                </div>
+
+                <div class="ListProduct">
+                    <h3 class="language-text" data-en="5. Packaging Information" data-jp="5. 梱包情報">5. 梱包情報</h3>
+                    <ul>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Packaging Type:" data-jp="梱包タイプ：">梱包タイプ：</label> 合板パレット</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Package Dimensions:" data-jp="梱包寸法：">梱包寸法：</label> 150cm × 70cm × 166cm</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Gross Weight:" data-jp="総重量：">総重量：</label> 約83 kg</li>
+                        <li><label style="color: #222; font-weight: 600;" class="language-text" data-en="Units per Package:" data-jp="1梱包あたりの単位数：">1梱包あたりの単位数：</label> 1台</li>
+                    </ul>
+                </div>
+
+                <div class="ListProduct">
+                    <h3 class="language-text" data-en="6. Attachments" data-jp="6. 付属品">6. 付属品</h3>
+                    <ul>
+                        <li class="language-text" data-en="Product specifications" data-jp="製品仕様書">製品仕様書</li>
+                        <li class="language-text" data-en="User Manual (Multilingual)" data-jp="取扱説明書（多言語）">取扱説明書（多言語）</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="specifc__image">
+                <img src="Images/Picture1.png" alt="水耕栽培野菜" class="features__imgcon" />
+            </div>
+        </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Video Presentation Section -->
+    <!-- <section class="video-section" id="video">
+        <div class="container">
+            <h2 class="section__title"><span class="language-text" data-en="Video Presentation" data-jp="ビデオプレゼンテーション">ビデオプレゼンテーション</span></h2>
+            <div class="section-subtitle language-text" data-en="Watch our product demonstration video to see San Hydro-App in action" data-jp="San Hydro-Appの動作をご覧いただく製品デモビデオをご覧ください">
+                San Hydro-Appの動作をご覧いただく製品デモビデオをご覧ください
+            </div>
+            <div class="lines"></div>
+
+             <div class="" style="text-align: center; margin-bottom: 70px; ">
+                 <span style="color: #04928F; font-weight: 600; ">  San Hydro App chambers</span>
+                 <h2 style="font-size: 36px; margin-bottom: .3em;"><span class="language-text" data-en="Product Specification" data-jp="製品仕様">製品仕様</span></h2>
+                 <div class="lines"></div>
+            </div>
+
+            
+            <div class="video-container">
+                 <div class="video-wrapper">
+                    <video id="autoplay-video" width="100%" preload="metadata" muted playsinline>
+                        <source src="vid/HydroPic.mp4" type="video/mp4">
+                        お使いのブラウザはHTMLビデオをサポートしていません。
+                    </video>
+                    
+                    <div class="video-overlay" id="video-overlay">
+                        <div class="play-overlay-btn" id="play-overlay-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <h3 class="language-text" data-en="Click to play video" data-jp="クリックしてビデオを再生">クリックしてビデオを再生</h3>
+                    </div>
+                    
+                    <div class="video-loading" id="video-loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <span class="language-text" data-en="Loading video..." data-jp="ビデオを読み込み中...">ビデオを読み込み中...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- Frequently Asked Questions -->
+    <section id="faq" style="background-color: #f0f7f4; padding: 100px 0 200px">
+        <div class="container">
+            <h2 class="section__title"><span class="language-text" data-en="Frequently Asked Questions" data-jp="よくある質問">よくある質問</span></h2>
+            <div class="lines"></div>
+
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="language-text" data-en="What is the recommended lighting schedule for hydroponic plants?" data-jp="水耕栽培植物の推奨照明スケジュールは何ですか？">水耕栽培植物の推奨照明スケジュールは何ですか？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="language-text" data-en="The recommended lighting schedule is 14 hours on and 10 hours off. This mimics natural sunlight patterns and gives plants adequate rest periods to prevent issues like tip burn." data-jp="推奨される照明スケジュールは、14時間点灯、10時間消灯です。これは自然な日光パターンを模倣し、チップバーンなどの問題を防ぐために植物に適切な休息時間を与えます。">
+                            推奨される照明スケジュールは、14時間点灯、10時間消灯です。これは自然な日光パターンを模倣し、チップバーンなどの問題を防ぐために植物に適切な休息時間を与えます。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="language-text" data-en="How often should I check pH and EC levels?" data-jp="pHとECレベルはどのくらいの頻度で確認すべきですか？">pHとECレベルはどのくらいの頻度で確認すべきですか？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="language-text" data-en="We recommend checking pH and EC levels at least once per day, especially after transferring seedlings or refilling water. For lettuce, ideal EC is 800-1200 S/cm and pH is 6.0-7.0." data-jp="pHとECレベルは少なくとも1日に1回、特に苗を移植したり水を補充したりした後に確認することをお勧めします。レタスの場合、理想的なECは800-1200 S/cm、pHは6.0-7.0です。">
+                            pHとECレベルは少なくとも1日に1回、特に苗を移植したり水を補充したりした後に確認することをお勧めします。レタスの場合、理想的なECは800-1200 S/cm、pHは6.0-7.0です。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="language-text" data-en="How can I prevent green algae in my hydroponic system?" data-jp="水耕栽培システムで緑藻を防ぐにはどうすればよいですか？">水耕栽培システムで緑藻を防ぐにはどうすればよいですか？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="language-text" data-en="To prevent green algae: 1) Block light exposure to water by covering unused holes, 2) Maintain proper water circulation, 3) Clean the system thoroughly between crops, and 4) Keep water temperature in the optimal range (18-25°C)." data-jp="緑藻を防ぐには：1）使用していない穴を覆って水への光の露出をブロックする、2）適切な水循環を維持する、3）作物の間にシステムを徹底的に清掃する、4）水温を最適範囲（18-25°C）に保つ。">
+                            緑藻を防ぐには：1）使用していない穴を覆って水への光の露出をブロックする、2）適切な水循環を維持する、3）作物の間にシステムを徹底的に清掃する、4）水温を最適範囲（18-25°C）に保つ。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="language-text" data-en="What vegetables can I grow with the San Hydro system?" data-jp="San Hydroシステムで育てられる野菜は何ですか？">San Hydroシステムで育てられる野菜は何ですか？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="language-text" data-en="The San Hydro system is ideal for leafy greens like lettuce, kale, spinach, and herbs. You can also grow smaller varieties of tomatoes, peppers, and strawberries. Refer to seed packaging for specific growing requirements." data-jp="San Hydroシステムは、レタス、ケール、ほうれん草、ハーブなどの葉物野菜に最適です。また、小さな品種のトマト、ピーマン、イチゴも育てることができます。具体的な栽培要件については種子のパッケージをご参照ください。">
+                            San Hydroシステムは、レタス、ケール、ほうれん草、ハーブなどの葉物野菜に最適です。また、小さな品種のトマト、ピーマン、イチゴも育てることができます。具体的な栽培要件については種子のパッケージをご参照ください。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="language-text" data-en="How do I get technical support for my San Hydro system?" data-jp="San Hydroシステムの技術サポートを受けるにはどうすればよいですか？">San Hydroシステムの技術サポートを受けるにはどうすればよいですか？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="language-text" data-en="For technical support, you can: 1) Call our support line at +63 (047) 252 5610-12 OR +63 47 252 1735 local 204 during business hours, 2) Email christopher.valdivia@sanyodenki.com with details of your issue." data-jp="技術サポートについては、次のことができます：1）営業時間中にサポートライン+63 (047) 252 5610-12または+63 47 252 1735内線204にお電話ください、2）問題の詳細をchristopher.valdivia@sanyodenki.comにメールで送信してください。">
+                            技術サポートについては、次のことができます：1）営業時間中にサポートライン<a href="tel:+630472525610">+63 (047) 252 5610-12</a>または<a href="tel:+63472521735">+63 47 252 1735</a>内線204にお電話ください、2）問題の詳細を<a href="mailto:christopher.valdivia@sanyodenki.com">christopher.valdivia@sanyodenki.com</a>にメールで送信してください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <i class="fa-solid fa-leaf" style="position: absolute; color: #04928F; transform: scale(3); top: 10%; right: 20%;"></i>
+            <i class="fa-solid fa-leaf" style="position: absolute; color: #04928F; transform: scale(3) rotate(200deg); bottom: 10%; left: 20%;"></i>
+        </div>
+    </section>
+
+
+    <section class="contacts" style="background-color: #fff; padding: 100px 0;">
+        <div class="container contacts_container">
+            
+
+            <div class="contact-info">
+                <div class="contacts_information">
+                <div class="" style="text-align: left;  ">
+                 <span style="color: #04928F; font-weight: 600; "><i class="fas fa-seedling"></i>  San Hydro App</span>
+                 <h2 style="font-size: 36px; margin-bottom: .3em;"><span class="language-text" data-en="Get in Touch" data-jp="お問い合わせ">お問い合わせ</span></h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div>
+                        <span>Email Address :</span>
+                        <p>christopher.valdivia@sanyodenki.com</p>
+                    </div>
+                    <div>
+                        <span>Contact No.</span>
+                        <p>Phone : +63 (047) 252 5610-12</p>
+                    </div>
+                     <div>
+                        <span>Company Email</span>
+                        <p>hr.pga@sanyodenki.com</p>
+                    </div>
+
+                     <div>
+                        <span>Company address</span>
+                        <p>christopher.valdivia@sanyodenki.com</p>
+                    </div>
+                </div>
+            </div>
+
+           
+            </div>
+
+             <div class="comtact_Map">
+                <img src="Images/Map.png" alt="" width="100%">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer  -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="language-text" data-en="About San Hydro-App" data-jp="San Hydro-Appについて">San Hydro-Appについて</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 20px;" class="language-text" data-en="Through our hydroponic appliance, we deliver safe and reliable vegetables, along with the joy of experiencing the growing process." data-jp="私たちの水耕栽培アプライアンスを通じて、安全で信頼できる野菜と、成長過程を体験する喜びをお届けします。">
+                        私たちの水耕栽培アプライアンスを通じて、安全で信頼できる野菜と、成長過程を体験する喜びをお届けします。
+                    </p>
+                    <p style="color: #cbd5e1; margin-bottom: 20px;" class="language-text" data-en="We hope that this hands-on cultivation experience supports your daily health and enriches your life." data-jp="この実践的な栽培体験が、日々の健康を支え、人生を豊かにすることを願っています。">
+                        この実践的な栽培体験が、日々の健康を支え、人生を豊かにすることを願っています。
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="language-text" data-en="TELEPHONE" data-jp="電話">電話</h4>
+                                <p>+63 (047) 252 5610-12</p>
+                                <p>+63 47 252 1735 内線204</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="language-text" data-en="EMAIL ADDRESS" data-jp="メールアドレス">メールアドレス</h4>
+                                <a href="mailto:christopher.valdivia@sanyodenki.com">christopher.valdivia@sanyodenki.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="language-text" data-en="Quick Links" data-jp="クイックリンク">クイックリンク</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-chevron-right"></i><a href="#home" class="nav-link" data-en="Home" data-jp="ホーム">ホーム</a></li>
+                        <li><i class="fas fa-chevron-right"></i><a href="#about" class="nav-link" data-en="About Us" data-jp="製品紹介">製品紹介</a></li>
+                        <li><i class="fas fa-chevron-right"></i><a href="#video" class="nav-link" data-en="Video Presentation" data-jp="ビデオプレゼンテーション">ビデオプレゼンテーション</a></li>
+                        <li><i class="fas fa-chevron-right"></i><a href="#feat" class="nav-link" data-en="Product Specifications" data-jp="製品仕様">製品仕様</a></li>
+                        <li><i class="fas fa-chevron-right"></i><a href="#contact" class="nav-link" data-en="Contact" data-jp="お問い合わせ">お問い合わせ</a></li>
+                    </ul>
+                    
+                    <div class="social-icons" style="margin-top: 30px;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 San Hydro-App. All rights reserved. SANYO DENKI PHILIPPINES, INC.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+       
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+      
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // モバイルメニューを閉じる
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+       
+        const nav = document.querySelector("header");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY >= 100) {
+                nav.classList.add("active_nav");
+            } else {
+                nav.classList.remove("active_nav");
+            }
+        });
+
+     
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+       
+        const langJpBtn = document.getElementById('langJp');
+        const langEnBtn = document.getElementById('langEn');
+        let currentLang = 'en';
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+          
+            if (lang === 'jp') {
+                langJpBtn.classList.add('active');
+                langEnBtn.classList.remove('active');
+            } else {
+                langEnBtn.classList.add('active');
+                langJpBtn.classList.remove('active');
+            }
+            
+           
+            document.querySelectorAll('.language-text').forEach(element => {
+                const enText = element.getAttribute('data-en');
+                const jpText = element.getAttribute('data-jp');
+                
+                if (lang === 'en' && enText) {
+                    element.textContent = enText;
+                } else if (lang === 'jp' && jpText) {
+                    element.textContent = jpText;
+                }
+            });
+            
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                const enText = link.getAttribute('data-en');
+                const jpText = link.getAttribute('data-jp');
+                
+                if (lang === 'en' && enText) {
+                    link.textContent = enText;
+                } else if (lang === 'jp' && jpText) {
+                    link.textContent = jpText;
+                }
+            });
+            
+            
+            document.documentElement.lang = lang;
+            
+           
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+       
+        langJpBtn.addEventListener('click', () => switchLanguage('jp'));
+        langEnBtn.addEventListener('click', () => switchLanguage('en'));
+
+       
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'jp';
+            switchLanguage(savedLang);
+        });
+
+
+         const video = document.getElementById('autoplay-video');
+        const videoOverlay = document.getElementById('video-overlay');
+        const playOverlayBtn = document.getElementById('play-overlay-btn');
+        const videoLoading = document.getElementById('video-loading');
+        let videoHasPlayed = false;
+        let videoIsLoading = false;
+
+       
+        playOverlayBtn.addEventListener('click', () => {
+            playVideo();
+        });
+
+        
+        videoOverlay.addEventListener('click', (e) => {
+            if (e.target !== playOverlayBtn && !playOverlayBtn.contains(e.target)) {
+                playVideo();
+            }
+        });
+
+        function playVideo() {
+            if (videoIsLoading) return;
+            
+            videoIsLoading = true;
+            videoLoading.classList.add('active');
+            
+            // ビデオを再生
+            video.play().then(() => {
+                videoOverlay.classList.add('hidden');
+                videoHasPlayed = true;
+                videoIsLoading = false;
+                videoLoading.classList.remove('active');
+            }).catch(error => {
+                console.error('ビデオ再生エラー:', error);
+                videoIsLoading = false;
+                videoLoading.classList.remove('active');
+                
+                // エラー時はユーザーに手動再生を促す
+                videoOverlay.querySelector('h3').textContent = currentLang === 'jp' 
+                    ? 'クリックしてビデオを再生（エラーが発生しました）' 
+                    : 'Click to play video (an error occurred)';
+            });
+        }
+
+        // ビデオ終了時にオーバーレイを再表示
+        video.addEventListener('ended', () => {
+            videoOverlay.classList.remove('hidden');
+            video.currentTime = 0;
+        });
+
+        // スクロール検出で自動再生
+        function checkVideoInView() {
+            const videoSection = document.getElementById('video');
+            const rect = videoSection.getBoundingClientRect();
+            
+            // ビデオセクションが画面の中央付近にあるかチェック
+            const isInView = rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+            
+            if (isInView && !videoHasPlayed && !videoIsLoading) {
+                playVideo();
+            }
+        }
+
+        // スクロールイベントリスナー
+        window.addEventListener('scroll', checkVideoInView);
+        
+        // 初期表示時にもチェック
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(checkVideoInView, 1000); // ページ読み込み後1秒でチェック
+        });
+
+        // タブ切り替え時にもチェック
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
+                setTimeout(checkVideoInView, 500);
+            }
+        });
+    </script>
+</body>
+</html>
