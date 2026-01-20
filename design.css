@@ -1515,11 +1515,11 @@
 
 .cardcustom{
     position: relative !important;
-    background: #fff;
+    background: #f0f7f4;
 }
 
 .cardcustom:hover .cardimg img {
-   transform: translateY(-22%);
+transform: translateY(-22%);
   cursor: pointer;
 }
 
