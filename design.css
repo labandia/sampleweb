@@ -667,7 +667,9 @@
             }
 
            
-
+            .popular__card img{
+                width: 50% !important;
+            }
            
 
             .section, .about {
@@ -1466,3 +1468,19 @@
     margin-bottom: 1em;
 }
 
+.comtact_Map{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comtact_Map a{
+    width: 200px;
+    text-align: center;
+    padding: .5em 1.5em;
+    background-color: #04928F;
+    color: #fff;
+    text-decoration: none;
+    border-radius: .3em;
+}
