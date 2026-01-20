@@ -110,10 +110,14 @@
             color: var(--secondary);
         }
 
+        #aboutImages{
+            width: 100%;
+        }
+
         /* Hero Section */
         .hero {
             padding-top:2em;
-             height: 100vh;
+            height: 100vh;
             background-image: 
                 radial-gradient(circle at 17% 77%, rgba(17, 17, 17, 0.04) 0%, 
                 rgba(17, 17, 17, 0.04) 50%, 
@@ -127,7 +131,7 @@
                 rgba(177, 177, 177, 0.04) 50%, 
                 rgba(187, 187, 187, 0.04) 50%, 
                 rgba(187, 187, 187, 0.04) 100%), 
-                linear-gradient(19deg, #027975, #04928f);
+                linear-gradient(19deg, hsl(178, 97%, 24%), #04928f);
             background-size: cover;
             background-position: center;
             overflow: hidden;
@@ -196,6 +200,18 @@
             border-radius: var(--radius);
             /* box-shadow: var(--shadow); */
             animation: float 6s ease-in-out infinite;
+        }
+
+        #leaf-right{
+            position: absolute; 
+            color: #23af85; 
+            transform: scale(3); 
+            top: 10%; 
+            right: 20%;
+        }
+
+        #leaf-left{
+            position: absolute; color: #23af85; transform: scale(3) rotate(200deg); bottom: 10%; left: 15%;
         }
 
         #sandisk{
@@ -534,6 +550,51 @@
                 gap: 40px;
             }
 
+            .div2{
+                display: none;
+            }
+
+            .hero{
+                  height: 40vh;
+            }
+
+             .hero-image #floatImage {
+            /* width: 100%; */
+                width: 50%;
+                max-width: 500px;
+                border-radius: var(--radius);
+                /* box-shadow: var(--shadow); */
+                animation: float 6s ease-in-out infinite;
+            }
+
+             #aboutImages{
+                width: 50%;
+            }
+
+            .features__imgcon{
+                width: 50%;
+            }
+
+            .hero-actions {
+                justify-content: center; 
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            #MobileImage{
+                display: none;
+            }
+
+            .about-content {
+                order: -1;
+            }
+
+             .popular h1 {
+                font-size: 1.3rem;
+            }
+
             .hero-content, .about-content {
                 text-align: center;
             }
@@ -549,11 +610,34 @@
             .features__container.left {
                 margin-top: 40px;
             }
+
+            #leaf-right{
+                position: absolute; 
+                color: #23af85; 
+                transform: scale(3); 
+                top: 10%; 
+                right: 5%;
+            }
+
+            #leaf-left{
+                position: absolute; 
+                color: #23af85; 
+                transform: scale(3) rotate(200deg); 
+                bottom: 10%; left: 5%;
+            }
         }
 
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
+            }
+
+            .div2{
+                display: none;
+            }
+
+            .popular h1 {
+                font-size: 1.3rem;
             }
 
             .nav-links {
@@ -578,13 +662,9 @@
                 visibility: visible;
             }
 
-            .hero {
-                padding: 140px 0 80px;
-            }
+           
 
-            .hero-content h1 {
-                font-size: 36px;
-            }
+           
 
             .section, .about {
                 padding: 80px 0;
@@ -625,8 +705,8 @@
 
          /* Video Presentation Section */
         .video-section {
+            position: relative;
             padding: 100px 0;
-            background-color: white;
         }
 
         .video-container {
@@ -1045,49 +1125,7 @@
         /* 既存のCSSに以下のレスポンシブスタイルを追加 */
 
 @media (max-width: 1200px) {
-    .parent {
-        grid-template-columns: repeat(6, 1fr);
-    }
-    
-    .div1 {
-        grid-column: span 3;
-        grid-row: span 3;
-    }
-    
-    .div2 {
-        grid-column: span 3;
-        grid-row: span 6;
-        grid-column-start: 4;
-    }
-    
-    .div3 {
-        grid-column: span 3;
-        grid-row: span 3;
-        grid-column-start: 1;
-        grid-row-start: 4;
-    }
-    
-    .div4 {
-        grid-column: span 3;
-        grid-row: span 3;
-        grid-row-start: 7;
-    }
-    
-    .div7 {
-        grid-column: span 3;
-        grid-row: span 3;
-        grid-column-start: 4;
-        grid-row-start: 7;
-    }
-    
-    .feature_circle {
-        width: 350px;
-        height: 350px;
-    }
-}
-
-@media (max-width: 768px) {
-    .parent {
+     .parent {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
@@ -1100,6 +1138,21 @@
         height: auto;
         min-height: 300px;
         margin-bottom: 30px;
+    }
+
+    .div2{
+                display: none;
+            }
+}
+
+@media (max-width: 768px) {
+    #header{
+        padding: 1em 2em;
+    }
+
+
+    .fa-leaf{
+        font-size: .7rem;
     }
     
     .feature_circle {
@@ -1119,12 +1172,11 @@
     }
     
     .hero-container {
-        padding-top: 100px;
         padding-bottom: 50px;
     }
     
     .hero-content h1 {
-        font-size: 28px;
+        font-size: 38px;
     }
     
     .section, .about, .Sanfeature, #faq {
@@ -1144,11 +1196,12 @@
         margin-left: 0;
         margin-top: 15px;
     }
-    
+ 
     .hero-actions {
         display: flex;
         flex-direction: row;
         gap: 15px;
+        flex-wrap: wrap;
     }
     
     .btn {
@@ -1158,6 +1211,7 @@
 }
 
 @media (max-width: 480px) {
+    
     .container {
         padding: 0 15px;
     }
@@ -1406,3 +1460,4 @@
     line-height: 1.6;
     margin-bottom: 1em;
 }
+
