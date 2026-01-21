@@ -324,14 +324,22 @@
                 </div>
                  <div class="lines"></div>
             </div>
-
+                    <video width="450" controls>
+                        <source
+                           src="vid/HydroPic.mp4"
+                           type="video/mp4"
+                        />
+                        Your browser does not support HTML video.
+                     </video>
             
             <div class="video-container">
                  <div class="video-wrapper">
-                    <video id="autoplay-video" width="100%" preload="metadata" muted playsinline>
-                        <source src="vid/HydroPic.mp4" type="video/mp4">
+                    <!-- <video id="autoplay-video" width="100%" preload="metadata" muted playsinline>
+                        <source src="Vid/HydroPic.mp4" type="video/mp4">
                         お使いのブラウザはHTMLビデオをサポートしていません。
-                    </video>
+                    </video> -->
+
+                    
                     
                     <div class="video-overlay" id="video-overlay">
                         <div class="play-overlay-btn" id="play-overlay-btn">
@@ -646,82 +654,82 @@
         });
 
 
-         const video = document.getElementById('autoplay-video');
-        const videoOverlay = document.getElementById('video-overlay');
-        const playOverlayBtn = document.getElementById('play-overlay-btn');
-        const videoLoading = document.getElementById('video-loading');
-        let videoHasPlayed = false;
-        let videoIsLoading = false;
+        //  const video = document.getElementById('autoplay-video');
+        // const videoOverlay = document.getElementById('video-overlay');
+        // const playOverlayBtn = document.getElementById('play-overlay-btn');
+        // const videoLoading = document.getElementById('video-loading');
+        // let videoHasPlayed = false;
+        // let videoIsLoading = false;
 
        
-        playOverlayBtn.addEventListener('click', () => {
-            playVideo();
-        });
+        // playOverlayBtn.addEventListener('click', () => {
+        //     playVideo();
+        // });
 
         
-        videoOverlay.addEventListener('click', (e) => {
-            if (e.target !== playOverlayBtn && !playOverlayBtn.contains(e.target)) {
-                playVideo();
-            }
-        });
+        // videoOverlay.addEventListener('click', (e) => {
+        //     if (e.target !== playOverlayBtn && !playOverlayBtn.contains(e.target)) {
+        //         playVideo();
+        //     }
+        // });
 
-        function playVideo() {
-            if (videoIsLoading) return;
+        // function playVideo() {
+        //     if (videoIsLoading) return;
             
-            videoIsLoading = true;
-            videoLoading.classList.add('active');
+        //     videoIsLoading = true;
+        //     videoLoading.classList.add('active');
             
-            // ビデオを再生
-            video.play().then(() => {
-                videoOverlay.classList.add('hidden');
-                videoHasPlayed = true;
-                videoIsLoading = false;
-                videoLoading.classList.remove('active');
-            }).catch(error => {
-                console.error('ビデオ再生エラー:', error);
-                videoIsLoading = false;
-                videoLoading.classList.remove('active');
+        //     // ビデオを再生
+        //     video.play().then(() => {
+        //         videoOverlay.classList.add('hidden');
+        //         videoHasPlayed = true;
+        //         videoIsLoading = false;
+        //         videoLoading.classList.remove('active');
+        //     }).catch(error => {
+        //         console.error('ビデオ再生エラー:', error);
+        //         videoIsLoading = false;
+        //         videoLoading.classList.remove('active');
                 
-                // エラー時はユーザーに手動再生を促す
-                videoOverlay.querySelector('h3').textContent = currentLang === 'jp' 
-                    ? 'クリックしてビデオを再生（エラーが発生しました）' 
-                    : 'Click to play video (an error occurred)';
-            });
-        }
+        //         // エラー時はユーザーに手動再生を促す
+        //         videoOverlay.querySelector('h3').textContent = currentLang === 'jp' 
+        //             ? 'クリックしてビデオを再生（エラーが発生しました）' 
+        //             : 'Click to play video (an error occurred)';
+        //     });
+        // }
 
-        // ビデオ終了時にオーバーレイを再表示
-        video.addEventListener('ended', () => {
-            videoOverlay.classList.remove('hidden');
-            video.currentTime = 0;
-        });
+        // // ビデオ終了時にオーバーレイを再表示
+        // video.addEventListener('ended', () => {
+        //     videoOverlay.classList.remove('hidden');
+        //     video.currentTime = 0;
+        // });
 
-        // スクロール検出で自動再生
-        function checkVideoInView() {
-            const videoSection = document.getElementById('video');
-            const rect = videoSection.getBoundingClientRect();
+        // // スクロール検出で自動再生
+        // function checkVideoInView() {
+        //     const videoSection = document.getElementById('video');
+        //     const rect = videoSection.getBoundingClientRect();
             
-            // ビデオセクションが画面の中央付近にあるかチェック
-            const isInView = rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+        //     // ビデオセクションが画面の中央付近にあるかチェック
+        //     const isInView = rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
             
-            if (isInView && !videoHasPlayed && !videoIsLoading) {
-                playVideo();
-            }
-        }
+        //     if (isInView && !videoHasPlayed && !videoIsLoading) {
+        //         playVideo();
+        //     }
+        // }
 
-        // スクロールイベントリスナー
-        window.addEventListener('scroll', checkVideoInView);
+        // // スクロールイベントリスナー
+        // window.addEventListener('scroll', checkVideoInView);
         
-        // 初期表示時にもチェック
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(checkVideoInView, 1000); // ページ読み込み後1秒でチェック
-        });
+        // // 初期表示時にもチェック
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     setTimeout(checkVideoInView, 1000); // ページ読み込み後1秒でチェック
+        // });
 
-        // タブ切り替え時にもチェック
-        document.addEventListener('visibilitychange', () => {
-            if (!document.hidden) {
-                setTimeout(checkVideoInView, 500);
-            }
-        });
+        // // タブ切り替え時にもチェック
+        // document.addEventListener('visibilitychange', () => {
+        //     if (!document.hidden) {
+        //         setTimeout(checkVideoInView, 500);
+        //     }
+        // });
     </script>
 </body>
 </html>
