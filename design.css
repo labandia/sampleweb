@@ -709,117 +709,7 @@
 
 
 
-         /* Video Presentation Section */
-        .video-section {
-            position: relative;
-            padding: 100px 0;
-        }
-
-        .video-container {
-             width: 100%;
-            /* display: grid;
-            grid-template-columns: 1fr;
-            gap: 60px;
-            align-items: center; */
-        }
-
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .video-placeholder {
-            width: 100%;
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            position: relative;
-        }
-
-        .video-placeholder i {
-            font-size: 80px;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-
-        .video-placeholder h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .video-placeholder p {
-            opacity: 0.8;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .play-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            z-index: 10;
-        }
-
-        .play-btn i {
-            font-size: 30px;
-            color: var(--primary);
-            margin-left: 5px;
-        }
-
-        .play-btn:hover {
-            background-color: white;
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-
-        .video-content h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: var(--secondary);
-        }
-
-        .video-content h2 span {
-            color: var(--primary);
-        }
-
-        .video-content p {
-            font-size: 18px;
-            color: var(--gray);
-            margin-bottom: 25px;
-        }
-
-        .video-features {
-            list-style: none;
-            margin-top: 30px;
-        }
-
-        .video-features li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .video-features i {
-            color: var(--primary);
-            margin-right: 15px;
-            margin-top: 5px;
-            font-size: 20px;
-        }
+         
 
 
 
@@ -1583,4 +1473,223 @@ transform: translateY(-22%);
     justify-content: center;
     gap: 0.3125rem;
     border-radius: .3125rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 既存のCSSに以下のスタイルを追加/修正 */
+
+/* Video Section Styles */
+.video-section {
+    position: relative;
+    padding: 5rem 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.video-section #leafimage {
+    position: absolute;
+    left: 0;
+    transform: scale(1.7) rotate(180deg);
+    opacity: .1;
+    max-width: 100%;
+    z-index: 1;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background-color: #000;
+}
+
+/* iFrameレスポンシブスタイル */
+.video-wrapper iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    display: block;
+}
+
+/* Video overlay for better UX */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.video-overlay:hover {
+    opacity: 1;
+}
+
+.play-overlay-btn {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    pointer-events: auto;
+}
+
+.play-overlay-btn:hover {
+    transform: scale(1.1);
+}
+
+.play-overlay-btn i {
+    font-size: 30px;
+    color: var(--primary);
+    margin-left: 5px;
+}
+
+.video-loading {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    z-index: 5;
+}
+
+.video-loading.active {
+    display: block;
+}
+
+
+
+/* Responsive adjustments for video */
+@media (max-width: 992px) {
+    .video-wrapper iframe {
+        height: 400px;
+    }
+    
+  
+}
+
+@media (max-width: 768px) {
+    .video-wrapper iframe {
+        height: 300px;
+    }
+    
+    .play-overlay-btn {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .play-overlay-btn i {
+        font-size: 24px;
+    }
+    
+    .video-overlay h3 {
+        font-size: 1rem;
+    }
+    
+    #leaf-right, #leaf-left {
+        transform: scale(1.5);
+    }
+    
+    #leaf-right {
+        top: 5%;
+        right: 5%;
+    }
+    
+    #leaf-left {
+        bottom: 5%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 576px) {
+    .video-wrapper iframe {
+        height: 250px;
+    }
+    
+    .video-section {
+        padding: 3rem 0;
+    }
+    
+    .play-overlay-btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .play-overlay-btn i {
+        font-size: 20px;
+    }
+    
+    #leaf-right, #leaf-left {
+        transform: scale(1);
+        display: none; /* 小さな画面では非表示に */
+    }
+}
+
+/* For very small devices */
+@media (max-width: 375px) {
+    .video-wrapper iframe {
+        height: 200px;
+    }
+}
+
+/* Aspect ratio保持のための追加スタイル */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Google Driveビデオプレイヤーのスタイル調整 */
+.video-wrapper iframe {
+    background-color: #000;
 }
