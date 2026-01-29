@@ -64,8 +64,28 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="Images/Picture1.png" alt="水耕栽培システム" id="floatImage" loading="lazy">
+                 <!-- スライドショーコンテナ -->
+            <div class="slideshow-container">
+                <!-- スライド -->
+                <div class="slide active">
+                    <img src="Images/Picture1.png" alt="水耕栽培システム" class="slide-image" loading="lazy">
                 <img src="Images/SanDisk.png" alt="SanDisk" id="sandisk" loading="lazy">
+
+                </div>
+                <div class="slide">
+                    <img src="Images/SideImage.png" alt="水耕栽培チャンバー" class="slide-image" loading="lazy">
+                </div>
+                
+                
+                <!-- スライドショーコントロール（インジケーターのみ） -->
+                <div class="slideshow-controls">
+                    <div class="slide-indicators">
+                        <span class="indicator active" data-slide="0"></span>
+                        <span class="indicator" data-slide="1"></span>
+                     
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -749,6 +769,174 @@
         //         setTimeout(checkVideoInView, 500);
         //     }
         // });
+
+// アニメーション対応スライドショー機能
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    let currentSlide = 0;
+    const slideDuration = 5000; // 5秒
+    let isAnimating = false;
+    let slideInterval;
+    
+    // スライドを表示する関数（アニメーション付き）
+    function showSlide(index, direction = 'next') {
+        if (isAnimating) return;
+        
+        isAnimating = true;
+        
+        // 範囲チェック
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        
+        const currentActiveSlide = slides[currentSlide];
+        const nextSlide = slides[index];
+        
+        // アニメーションの方向に応じたクラスを追加
+        if (direction === 'next') {
+            currentActiveSlide.classList.add('slide-left-out');
+            nextSlide.classList.add('slide-left-in');
+        } else if (direction === 'prev') {
+            currentActiveSlide.classList.add('slide-right-out');
+            nextSlide.classList.add('slide-right-in');
+        } else {
+            currentActiveSlide.classList.add('fade-in');
+            nextSlide.classList.add('fade-in');
+        }
+        
+        // インジケーターの更新
+        indicators[currentSlide].classList.remove('active');
+        indicators[index].classList.add('active');
+        
+        // アニメーション終了後の処理
+        setTimeout(() => {
+            // 現在のスライドを非表示に
+            currentActiveSlide.classList.remove('active', 'slide-left-out', 'slide-right-out', 'slide-left-in', 'slide-right-in', 'fade-in');
+            currentActiveSlide.style.display = 'none';
+            
+            // 新しいスライドを表示
+            nextSlide.classList.remove('slide-left-out', 'slide-right-out', 'slide-left-in', 'slide-right-in', 'fade-in');
+            nextSlide.style.display = 'block';
+            nextSlide.classList.add('active');
+            
+            currentSlide = index;
+            isAnimating = false;
+        }, 800); // アニメーション時間（0.8秒）に合わせる
+    }
+    
+    // 次のスライドへ
+    function nextSlide() {
+        showSlide(currentSlide + 1, 'next');
+    }
+    
+    // 前のスライドへ
+    function prevSlide() {
+        showSlide(currentSlide - 1, 'prev');
+    }
+    
+    // 自動再生開始
+    function startAutoplay() {
+        if (slideInterval) clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, slideDuration);
+    }
+    
+    // インジケータークリックイベント
+    indicators.forEach(indicator => {
+        indicator.addEventListener('click', function() {
+            const slideIndex = parseInt(this.getAttribute('data-slide'));
+            const direction = slideIndex > currentSlide ? 'next' : 'prev';
+            showSlide(slideIndex, direction);
+            restartAutoplay();
+        });
+    });
+    
+    // 自動再生を再起動
+    function restartAutoplay() {
+        clearInterval(slideInterval);
+        startAutoplay();
+    }
+    
+    // タッチ/スワイプ対応
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let touchStartTime = 0;
+    const swipeThreshold = 50;
+    const swipeTimeThreshold = 300; // ミリ秒
+    
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    
+    slideshowContainer.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartTime = Date.now();
+    });
+    
+    slideshowContainer.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        const touchTime = Date.now() - touchStartTime;
+        handleSwipe(touchTime);
+    });
+    
+    function handleSwipe(touchTime) {
+        if (touchTime > swipeTimeThreshold) return;
+        
+        const swipeDistance = touchEndX - touchStartX;
+        
+        if (swipeDistance < -swipeThreshold) {
+            // 左スワイプ - 次のスライド
+            nextSlide();
+        }
+        
+        if (swipeDistance > swipeThreshold) {
+            // 右スワイプ - 前のスライド
+            prevSlide();
+        }
+        
+        restartAutoplay();
+    }
+    
+    // マウスホバーで一時停止
+    slideshowContainer.addEventListener('mouseenter', function() {
+        clearInterval(slideInterval);
+    });
+    
+    slideshowContainer.addEventListener('mouseleave', function() {
+        startAutoplay();
+    });
+    
+    // タブ切り替え時の処理
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            clearInterval(slideInterval);
+        } else {
+            startAutoplay();
+        }
+    });
+    
+    // 言語切り替え時のスライドショーリセット
+    const originalSwitchLanguage = window.switchLanguage;
+    
+    window.switchLanguage = function(lang) {
+        if (originalSwitchLanguage) {
+            originalSwitchLanguage(lang);
+        }
+        
+        // スライドショーを最初に戻す（アニメーションなし）
+        slides[currentSlide].classList.remove('active');
+        slides[currentSlide].style.display = 'none';
+        indicators[currentSlide].classList.remove('active');
+        
+        currentSlide = 0;
+        slides[currentSlide].style.display = 'block';
+        slides[currentSlide].classList.add('active');
+        indicators[currentSlide].classList.add('active');
+        
+        restartAutoplay();
+    };
+    
+    // 初期化
+    startAutoplay();
+});
     </script>
 </body>
 </html>
