@@ -1055,7 +1055,10 @@
 
 
 
-
+.highlighted{
+    color:#027975 !important;
+    font-weight: 600;
+}
 
 
 
@@ -1379,6 +1382,46 @@
   justify-content: center;
 }
 
+.QR_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+.QR_container img{
+    width: 30%;
+}
+.QR_container p{
+    text-align: center;
+    width: 350px;
+}
+
+.QR_container a{
+    background-color: #027975;
+    border-radius: 25px;
+    padding: .8em 2em;
+    color: #fff;
+    text-decoration: none;
+     transition: var(--transition);
+}
+
+.QR_container a:hover{
+      background-color: #115e59;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+}
+
+.QR_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.QR_container p{
+    margin: 1em 0;
+}
 
 .contacts_container {
     display: grid;
@@ -1423,11 +1466,11 @@
 }
 
 
-.Products{
+.Products, .QR_page{
     position: relative;
 
 }
-.Products #abstractimage{
+.Products #abstractimage, .QR_page #abstractimage{
     position: absolute;
     width: 100%;
     height: 100%;
