@@ -39,8 +39,36 @@
         </div>
     </header>
 
-    <!-- Hero Section or the Main page -->
+  <div class="background-slider">
+            <div class="bg-slide active" style="background-image: url('Images/Family.png');"></div>
+            <div class="bg-slide" style="background-image: url('Images/222.png');"></div>
+            <div class="bg-slide" style="background-image: url('Images/Dasdsds.png');"></div>
+            <div class="bg-slide" style="background-image: url('Images/SanyoFamily.png');"></div>
+        </div>
 
+
+    <!-- Hero Section or the Main page -->
+    <section class="hero" id="home">
+         <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="language-text" data-en="Perfect solution for modern home gardening" data-jp="安全で健康的な環境で、新鮮で化学物質不使用の野菜を育てる楽しみを！">
+                    安全で健康的な環境で、新鮮で化学物質不使用の野菜を育てる楽しみを！
+                </h1>
+                <p class="language-text" data-en="Through our hydroponic appliance, we deliver safe and reliable vegetables, along with the joy of experiencing the growing process." data-jp="私たちの水耕栽培アプライアンスを通じて、安全で信頼できる野菜と、成長過程を体験する喜びをお届けします。">
+                    私たちの水耕栽培アプライアンスを通じて、安全で信頼できる野菜と、成長過程を体験する喜びをお届けします。
+                </p>
+                <div class="hero-actions">
+                    <a href="#video" class="btn btn-primary">
+                        <i class="fa-solid fa-circle-play"></i> <span class="language-text" data-en="Watch Video" data-jp="ビデオを見る">ビデオを見る</span>
+                    </a>
+                    <a href="#feat" class="btn btn-secondary">
+                        <i class="fa-regular fa-eye"></i> <span class="language-text" data-en="View Specifications" data-jp="仕様を見る">仕様を見る</span>
+                    </a>
+                </div>
+            </div>
+           
+        </div>
+    </section>
 
 
 
@@ -69,7 +97,7 @@
     </section>
 
     <!-- Products Section -->
-    <div class="Products" style="padding: 100px  0  200px;">
+    <div class="Products" style="padding: 100px  0  200px; background: #fff;">
         <img src="Images/Abstract.jpg" alt="" id="abstractimage" loading="lazy">
         <div class="container">
             <div class="" style="text-align: center; margin-bottom: 70px; ">
@@ -256,7 +284,7 @@
 
         <div class="container">
              <div class="" style="text-align: center; margin-bottom: 70px; ">
-                 <span style="color: #04928F; font-weight: 600; ">  San Hydro App chambers</span>
+                 <span style="color: #04928F; font-weight: 600; "><i class="fas fa-seedling"></i>   San Hydro App chambers</span>
                  <h2 style="font-size: 36px; margin-bottom: .3em;"><span class="language-text" data-en="Video Presentation" data-jp="ビデオプレゼンテーション">ビデオプレゼンテーション</span></h2>
                    
                  <div style="margin-bottom: 1em;" class="section-subtitle language-text" data-en="Watch our product demonstration video to see San Hydro-App in action" data-jp="San Hydro-Appの動作をご覧いただく製品デモビデオをご覧ください">
@@ -400,18 +428,18 @@
 
                 <div class="contact-grid">
                     <div>
-                        <img src="Images/Sanyo denkiGlobal.pngs" width="100%"/>
-                        <span>Email Address :</span>
+                       
+                        <span> <i class="fa-solid fa-envelope"></i>  Email Address :</span>
                         <p>christopher.valdivia@sanyodenki.com</p>
                     </div>
                     <div>
-                        <span>Contact No :</span>
+                        <span> <i class="fa-solid fa-phone-volume"></i>   Contact No :</span>
                         <p>Phone : +63 (047) 252 5610-12</p>
                     </div>
                      
 
                      <div>
-                        <span>Company address :</span>
+                        <span><i class="fa-solid fa-map"></i> Company address :</span>
                         <p>Blk F-1 Subic Techno Park, Argonaut Highway, Boton Area, SBFZ, Philippines</p>
                     </div>
 
@@ -698,172 +726,58 @@
         // });
 
 // アニメーション対応スライドショー機能
-document.addEventListener('DOMContentLoaded', function() {
-    const slides = document.querySelectorAll('.slide');
-    const indicators = document.querySelectorAll('.indicator');
-    
-    let currentSlide = 0;
-    const slideDuration = 5000; // 5秒
-    let isAnimating = false;
-    let slideInterval;
-    
-    // スライドを表示する関数（アニメーション付き）
-    function showSlide(index, direction = 'next') {
-        if (isAnimating) return;
-        
-        isAnimating = true;
-        
-        // 範囲チェック
-        if (index < 0) index = slides.length - 1;
-        if (index >= slides.length) index = 0;
-        
-        const currentActiveSlide = slides[currentSlide];
-        const nextSlide = slides[index];
-        
-        // アニメーションの方向に応じたクラスを追加
-        if (direction === 'next') {
-            currentActiveSlide.classList.add('slide-left-out');
-            nextSlide.classList.add('slide-left-in');
-        } else if (direction === 'prev') {
-            currentActiveSlide.classList.add('slide-right-out');
-            nextSlide.classList.add('slide-right-in');
-        } else {
-            currentActiveSlide.classList.add('fade-in');
-            nextSlide.classList.add('fade-in');
-        }
-        
-        // インジケーターの更新
-        indicators[currentSlide].classList.remove('active');
-        indicators[index].classList.add('active');
-        
-        // アニメーション終了後の処理
-        setTimeout(() => {
-            // 現在のスライドを非表示に
-            currentActiveSlide.classList.remove('active', 'slide-left-out', 'slide-right-out', 'slide-left-in', 'slide-right-in', 'fade-in');
-            currentActiveSlide.style.display = 'none';
+
+
+
+
+ document.addEventListener('DOMContentLoaded', function() {
+            // Get all background slides
+            const bgSlides = document.querySelectorAll('.bg-slide');
+            let currentBgSlide = 0;
+            let bgInterval;
             
-            // 新しいスライドを表示
-            nextSlide.classList.remove('slide-left-out', 'slide-right-out', 'slide-left-in', 'slide-right-in', 'fade-in');
-            nextSlide.style.display = 'block';
-            nextSlide.classList.add('active');
+            // Function to show the next background slide
+            function showNextBgSlide() {
+                // Remove active class from current slide
+                bgSlides[currentBgSlide].classList.remove('active');
+                
+                // Move to next slide (loop back to first if at end)
+                currentBgSlide = (currentBgSlide + 1) % bgSlides.length;
+                
+                // Add active class to new current slide
+                bgSlides[currentBgSlide].classList.add('active');
+            }
             
-            currentSlide = index;
-            isAnimating = false;
-        }, 800); // アニメーション時間（0.8秒）に合わせる
-    }
-    
-    // 次のスライドへ
-    function nextSlide() {
-        showSlide(currentSlide + 1, 'next');
-    }
-    
-    // 前のスライドへ
-    function prevSlide() {
-        showSlide(currentSlide - 1, 'prev');
-    }
-    
-    // 自動再生開始
-    function startAutoplay() {
-        if (slideInterval) clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, slideDuration);
-    }
-    
-    // インジケータークリックイベント
-    indicators.forEach(indicator => {
-        indicator.addEventListener('click', function() {
-            const slideIndex = parseInt(this.getAttribute('data-slide'));
-            const direction = slideIndex > currentSlide ? 'next' : 'prev';
-            showSlide(slideIndex, direction);
-            restartAutoplay();
+            // Start automatic background rotation
+            function startBgRotation() {
+                // Change background every 5 seconds (5000ms)
+                bgInterval = setInterval(showNextBgSlide, 5000);
+            }
+            
+            // Initialize the background slider
+            function initBgSlider() {
+                // Start automatic rotation
+                startBgRotation();
+                
+                // Optional: Pause on hover (uncomment if you want this feature)
+                /*
+                const bgSlider = document.querySelector('.background-slider');
+                bgSlider.addEventListener('mouseenter', () => {
+                    clearInterval(bgInterval);
+                });
+                
+                bgSlider.addEventListener('mouseleave', () => {
+                    startBgRotation();
+                });
+                */
+            }
+            
+            // Initialize the background slider when page loads
+            initBgSlider();
         });
-    });
-    
-    // 自動再生を再起動
-    function restartAutoplay() {
-        clearInterval(slideInterval);
-        startAutoplay();
-    }
-    
-    // タッチ/スワイプ対応
-    let touchStartX = 0;
-    let touchEndX = 0;
-    let touchStartTime = 0;
-    const swipeThreshold = 50;
-    const swipeTimeThreshold = 300; // ミリ秒
-    
-    const slideshowContainer = document.querySelector('.slideshow-container');
-    
-    slideshowContainer.addEventListener('touchstart', function(e) {
-        touchStartX = e.changedTouches[0].screenX;
-        touchStartTime = Date.now();
-    });
-    
-    slideshowContainer.addEventListener('touchend', function(e) {
-        touchEndX = e.changedTouches[0].screenX;
-        const touchTime = Date.now() - touchStartTime;
-        handleSwipe(touchTime);
-    });
-    
-    function handleSwipe(touchTime) {
-        if (touchTime > swipeTimeThreshold) return;
-        
-        const swipeDistance = touchEndX - touchStartX;
-        
-        if (swipeDistance < -swipeThreshold) {
-            // 左スワイプ - 次のスライド
-            nextSlide();
-        }
-        
-        if (swipeDistance > swipeThreshold) {
-            // 右スワイプ - 前のスライド
-            prevSlide();
-        }
-        
-        restartAutoplay();
-    }
-    
-    // マウスホバーで一時停止
-    slideshowContainer.addEventListener('mouseenter', function() {
-        clearInterval(slideInterval);
-    });
-    
-    slideshowContainer.addEventListener('mouseleave', function() {
-        startAutoplay();
-    });
-    
-    // タブ切り替え時の処理
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            clearInterval(slideInterval);
-        } else {
-            startAutoplay();
-        }
-    });
-    
-    // 言語切り替え時のスライドショーリセット
-    const originalSwitchLanguage = window.switchLanguage;
-    
-    window.switchLanguage = function(lang) {
-        if (originalSwitchLanguage) {
-            originalSwitchLanguage(lang);
-        }
-        
-        // スライドショーを最初に戻す（アニメーションなし）
-        slides[currentSlide].classList.remove('active');
-        slides[currentSlide].style.display = 'none';
-        indicators[currentSlide].classList.remove('active');
-        
-        currentSlide = 0;
-        slides[currentSlide].style.display = 'block';
-        slides[currentSlide].classList.add('active');
-        indicators[currentSlide].classList.add('active');
-        
-        restartAutoplay();
-    };
-    
-    // 初期化
-    startAutoplay();
-});
+
+
+
     </script>
 </body>
 </html>
