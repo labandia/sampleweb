@@ -307,6 +307,10 @@ header {
     position: relative;
     background-color: white;
 }
+.about-content p{
+   font-size: clamp(.8rem, 2vw, .934rem);
+   line-height: 1.9;
+}
 
 .about-container {
     display: grid;
@@ -360,14 +364,13 @@ header {
     opacity: 0.1;
     transform: rotate(180deg);
 }
-        /* .video-section #leafimage {
-            position: absolute;
-            left: 0;
-            transform: scale(1.7) rotate(180deg);
-            opacity: .1;
-            max-width: 100%;
-            z-index: 1;
-        } */
+
+
+.feature_content p{
+    font-size: clamp(.8rem, 2vw, .937rem);
+    line-height: 1.8;
+    color: #222 !important;
+}
 
 .parent {
     display: grid;
@@ -387,7 +390,12 @@ header {
         order: 1;
     }
 
-    
+    .feature_circle {
+        display: none;
+    }
+    .div2{
+        display: none;
+    }
 }
 
 @media (min-width: 992px) {
@@ -424,6 +432,10 @@ header {
     .div7 {
         grid-column: 7 / 10;
         grid-row: 4 / 7;
+    }
+
+    .feature_circle{
+        display: block;
     }
 }
 
@@ -490,13 +502,15 @@ header {
     display: none;
 }
 
+
+
 @media (min-width: 1200px) {
     #leaf-right {
         position: absolute;
         color: #23af85;
-        font-size: 3rem;
-        top: 10%;
-        right: 5%;
+        transform: scale(3); 
+        top: 8%;
+        right: 8%;
         z-index: 1;
         display: block;
     }
@@ -504,10 +518,9 @@ header {
     #leaf-left {
         position: absolute;
         color: #23af85;
-        font-size: 3rem;
-        transform: rotate(200deg);
-        bottom: 10%;
-        left: 5%;
+        transform: scale(3) rotate(200deg);; 
+        bottom: 8%;
+        left: 8%;
         z-index: 1;
         display: block;
     }
@@ -1268,14 +1281,4 @@ footer {
 
 
 
-#leaf-right{
-            position: absolute; 
-            color: #23af85; 
-            transform: scale(3); 
-            top: 10%; 
-            right: 20%;
-        }
 
-        #leaf-left{
-            position: absolute; color: #23af85; transform: scale(3) rotate(200deg); bottom: 10%; left: 15%;
-        }
