@@ -904,9 +904,15 @@
 
 
 @media (max-width: 576px) {
-            /* .hero-content h1 {
-                font-size: 32px;
-            } */
+            .container {
+            width: 95%;
+        }
+
+
+           .hero-content h1{
+                font-size: 30px;
+            
+            }
 
             .btn {
                 padding: 12px 24px;
