@@ -46,6 +46,10 @@ img {
     display: block;
 }
 
+.Sanfeature, .about, .faq{
+     padding: clamp(60px, 10vw, 100px) 0;
+}
+
 /* ========================================================= */
 /* ================= TYPOGRAPHY RESPONSIVE ================= */
 /* ========================================================= */
@@ -302,7 +306,6 @@ header {
 .about {
     position: relative;
     background-color: white;
-    padding: clamp(60px, 10vw, 100px) 0;
 }
 
 .about-container {
@@ -343,113 +346,172 @@ header {
 /* ========================================================= */
 /* ================= FEATURES SECTION  ===================== */
 /* ========================================================= */
-
-        .Sanfeature{
-            position: relative;
-            background-color: #f8fafc;
-        }
+.Sanfeature {
+    position: relative;
+    background-color: #f8fafc;
+    overflow: hidden;
+}
         
-        #leafimage{
-            position: absolute;
-            left: 0;
-            transform: scale(1.7) rotate(180deg);
-            opacity: .1;
-        }
-
-        .video-section #leafimage {
+#leafimage {
+    position: absolute;
+    left: -50px;
+    width: 300px;
+    height: auto;
+    opacity: 0.1;
+    transform: rotate(180deg);
+}
+        /* .video-section #leafimage {
             position: absolute;
             left: 0;
             transform: scale(1.7) rotate(180deg);
             opacity: .1;
             max-width: 100%;
             z-index: 1;
-        }
+        } */
 
-        .parent {
-            display: grid;
-            grid-template-columns: repeat(9, 1fr);
-            grid-template-rows: repeat(6, 1fr);
-            gap: 15px;
-            
-        }
-            
-        .div1 {
-            grid-column: span 3 / span 3;
-            grid-row: span 3 / span 3;
-            height: 350px;
-            padding: 0 1em;
-        }
+.parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+}
 
-        .div2 {
-            position: relative;
-            grid-column: span 3 / span 3;
-            grid-row: span 6 / span 6;
-            grid-column-start: 4;
-        }
+@media (min-width: 768px) {
+    .parent {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
 
-        .div3 {
-            grid-column: span 3 / span 3;
-            grid-row: span 3 / span 3;
-            grid-column-start: 7;
-            height: 350px;
-            padding: 0 1em;
-        }
+    .div2{
+        order: 1;
+    }
 
-        .div4 {
-            grid-column: span 3 / span 3;
-            grid-row: span 3 / span 3;
-            grid-row-start: 4;
-            height: 350px;
-            padding: 0 1em;
-        }
+    
+}
 
-        .div7 {
-            grid-column: span 3 / span 3;
-            grid-row: span 3 / span 3;
-            grid-column-start: 7;
-            grid-row-start: 4;
-            height: 350px;
-            padding: 0 1em;
-        }
+@media (min-width: 992px) {
+    .parent {
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(6, auto);
+        gap: 15px;
+    }
+    
+    .div1 {
+        grid-column: 1 / 4;
+        grid-row: 1 / 4;
+    }
+    
+    .div2 {
+        grid-column: 4 / 7;
+        grid-row: 1 / 7;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .div3 {
+        grid-column: 7 / 10;
+        grid-row: 1 / 4;
+    }
+    
+    .div4 {
+        grid-column: 1 / 4;
+        grid-row: 4 / 7;
+    }
+    
+    .div7 {
+        grid-column: 7 / 10;
+        grid-row: 4 / 7;
+    }
+}
 
-        .feature_circle{
-            /* width: 450px;
-            height: 450px; */
-            width: 370px;
-            height: 370px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #04928f, #a7f3d0);
-            /* z-index: -1; */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+.feature_circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #04928f, #a7f3d0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-        .feature_imagecontent img{
-            width: 90%;
-            z-index: 100;
-        }
-        .feature_content, .feature_imagecontent{
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 10px;
-        }
+@media (min-width: 992px) {
+    .feature_circle {
+        width: 350px;
+        height: 350px;
+    }
+}
 
+@media (max-width: 700px) {
+    .feature_circle {
+        display: none;
+    }
+    .div2{
+        display: none;
+    }
+}
 
+.feature_imagecontent img {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 2;
+}
 
-        .feature_content h4{
-            font-size: 1.2rem;
-            margin: .5em 0;
-        }
+.feature_content {
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-        .feature_content p{
-            font-size: 15px;
-            color: var(--gray);
-        }
+.feature_content img {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.feature_content h4 {
+    margin: 15px 0;
+    color: var(--secondary);
+}
+
+.feature_content p {
+    color: var(--gray);
+    line-height: 1.6;
+}
+/* Leaf icons */
+#leaf-right, #leaf-left {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    #leaf-right {
+        position: absolute;
+        color: #23af85;
+        font-size: 3rem;
+        top: 10%;
+        right: 5%;
+        z-index: 1;
+        display: block;
+    }
+    
+    #leaf-left {
+        position: absolute;
+        color: #23af85;
+        font-size: 3rem;
+        transform: rotate(200deg);
+        bottom: 10%;
+        left: 5%;
+        z-index: 1;
+        display: block;
+    }
+}
 
         .feature_content button{
             background-color: #0f766e;
@@ -830,7 +892,7 @@ footer {
 .contact-details p, .contact-details a {
     color: white;
     text-decoration: none;
-    font-size: clamp(0.7rem, 1.5vw, .937rem);
+    font-size: clamp(0.7rem, 1.5vw, .943rem);
 }
 
 .contact-details a:hover {
@@ -923,6 +985,10 @@ footer {
     
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact-details a {
+        font-size: .8rem !important;
     }
 }
 
