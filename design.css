@@ -46,7 +46,7 @@ img {
     display: block;
 }
 
-.Sanfeature, .about, .faq{
+.Sanfeature, .about, .faq, .Chambers{
      padding: clamp(60px, 10vw, 100px) 0;
 }
 
@@ -968,7 +968,23 @@ header {
     color: white;
 }
 
+.Chambers {
+    background: #fff;
+}
 
+.Chambers img{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+    .Chambers img{
+        width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
 /* ========================================================= */
 /* ================= FOOTER  SECTION  ===================== */
 /* ========================================================= */
