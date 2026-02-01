@@ -830,6 +830,7 @@ footer {
 .contact-details p, .contact-details a {
     color: white;
     text-decoration: none;
+    font-size: clamp(0.7rem, 1.5vw, .937rem);
 }
 
 .contact-details a:hover {
