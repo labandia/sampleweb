@@ -380,6 +380,12 @@ header {
     }
 }
 
+@media (min-width: 800px) {
+     .OfferImage img{
+        width: 70% !important;
+    }
+}
+
 
 .OfferImage{
     display: flex;
@@ -1052,7 +1058,7 @@ header {
 
 .Chambers img{
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
