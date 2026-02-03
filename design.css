@@ -50,6 +50,15 @@ img {
      padding: clamp(60px, 10vw, 100px) 0;
 }
 
+.headerSub{
+    display: flex; 
+    align-items: center; 
+    justify-content:center; 
+    margin-bottom: 70px;  
+    width: 100%; 
+    flex-direction:  column;
+}
+
 /* ========================================================= */
 /* ================= TYPOGRAPHY RESPONSIVE ================= */
 /* ========================================================= */
@@ -370,7 +379,7 @@ header {
         height: auto;
     }
     .Offers::after{
-        height: 300px;
+        height: 230px;
     }
     .OfferText h2{
         margin-top: -1em;
@@ -936,7 +945,7 @@ header {
 
 @media (min-width: 768px) {
     .QR_container {
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1fr;
           gap: 30px;
     }
 }
@@ -1056,14 +1065,14 @@ header {
     background: #fff;
 }
 
-.Chambers img{
+.Chambers .chamberspecs{
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
 }
 
 @media (min-width: 992px) {
-    .Chambers img{
+    .Chambers .chamberspecs{
         width: 100%;
         max-width: 80%;
         margin: 0 auto;
