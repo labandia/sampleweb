@@ -1354,8 +1354,13 @@ footer {
 }
 
 
-
-
+.link-hover{
+    color: #222; 
+    text-decoration: none;
+}
+.link-hover:hover{
+    text-decoration: underline;
+}
 
 
 
