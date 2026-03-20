@@ -369,23 +369,26 @@ header {
 }
 
 @media (max-width: 768px) {
+    .Offers{
+        margin-bottom: 3em;
+    }
     .Offercontainer{
-        grid-template-columns: 1fr;
+        grid-template-columns: 30% 1fr;
         text-align: center;
         gap: 40px;
     }
     .OfferImage img{
-        width: 30% !important;
+        width: 80% !important;
         height: auto;
+        transform: translateY(60px) translateX(20px) !important ;
     }
     .Offers::after{
-        height: 230px;
+        height: 140px;
     }
     .OfferText h2{
-        margin-top: -1em;
+        margin-top: 6.5em;
     }
     .OfferText p{
-        margin-bottom: 1em;
     }
 }
 
