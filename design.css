@@ -106,7 +106,8 @@ header {
     top: 0;
     z-index: 1000;
     transition: var(--transition);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 2px 20px rgba(68, 65, 65, 0.1);
 }
 
 .nav-container {
@@ -121,13 +122,14 @@ header {
     gap: 10px;
     font-size: clamp(1rem, 3vw, 1.25rem);
     font-weight: 700;
-    color: #fff;
+    color: #08c0bd;
+
     text-decoration: none;
     z-index: 1001;
 }
 
 .logo span{
-    color: #04928f;
+    color: rgb(72, 71, 66);
 }
 
 .logo img {
@@ -143,7 +145,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #fff;
+    color: #222;
     font-weight: 500;
     transition: var(--transition);
     padding: 8px 0;
