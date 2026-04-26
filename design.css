@@ -114,7 +114,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 .logo {
     display: flex;
@@ -271,7 +271,8 @@ header {
 
 .hero-content h1 {
     color: white;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 3.3rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
@@ -708,11 +709,21 @@ header {
     position: relative;
     background-color: #fff;
 }
+
+.ListProduct ul{
+   list-style: none;
+   margin: 1em 0;
+}
+
+.ListProduct ul li{
+    margin-bottom: .5em;
+}
+
 .specification__container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 @media screen and (max-width: 768px) {
