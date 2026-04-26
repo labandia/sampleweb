@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Hydro-App - 水耕栽培アプライアンス</title>
+    <title>SDP Hydroponics</title>
     <link rel="stylesheet" href="design.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -41,19 +41,23 @@
             <div class="bg-slide active" style="background-image: url('Images/Family.png');"></div>
             <div class="bg-slide" style="background-image: url('Images/SanyoFamily.png');"></div>
             <div class="bg-slide" style="background-image: url('Images/Dasdsds.png');"></div>
-        </div>
+  </div>
 
 
     <!-- Hero Section or the Main page -->
     <section class="hero" id="home">
          <div class="container hero-container">
             <div class="hero-content">
-                <h1 class="language-text" data-en="Perfect solution for modern Home Gardening" data-jp="安全で健康的な環境で、新鮮で化学物質不使用の野菜を育てる楽しみを！">
-                    安全で健康的な環境で、新鮮で化学物質不使用の野菜を育てる楽しみを！
+                <h1 class="language-text">
+                    Perfect solution for modern Home Gardening
                 </h1>
-                <p style="font-size: 1.5rem;">* For the Philippine market</p>
-                <p class="language-text" data-en="Through our hydroponic appliance, we deliver safe and reliable vegetables, along with the joy of experiencing the growing process." data-jp="私たちの水耕栽培アプライアンスを通じて、安全で信頼できる野菜と、成長過程を体験する喜びをお届けします。">
-                    私たちの水耕栽培アプライアンスを通じて、安全で信頼できる野菜と、成長過程を体験する喜びをお届けします。
+                <p style="font-size: 1.3rem; display: flex; gap: 15px; align-items: center; justify-content: center;">
+                        <span>* For the Philippine market </span>
+                        <img src="Images/philippines.png">
+                </p>
+                <p class="language-text">
+                   Through our hydroponic appliance, we deliver safe and reliable vegetables, along with the 
+                   joy of experiencing the growing process.
                 </p>
                 <div class="hero-actions">
                     <a href="#video" class="btn btn-primary">
@@ -69,7 +73,7 @@
     </section>
 
 
- <!-- About Section -->
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="container about-container">
             <div class="about-image">
@@ -80,12 +84,18 @@
                             <img src="Images/logo.png" alt="">
                             <span>SDP</span>Hydroponics
                         </a></p>
-                <h2 ><span class="language-text " data-en=" Hydroponic cultivation" data-jp="San Hydroアプライアンスについて">San Hydroアプライアンスについて</span></h2>
-                <p class="language-text " data-en="Hydroponic cultivation is a method of growing plants without using soil, and various features are required to promote efficient growth. There are necessary features for a hydroponic cultivation device to support the essential elements for growing plants to be healthy. Different variety of vegetables can be planted on the hydroponic chambers." data-jp="水耕栽培は土を使わずに植物を育てる方法で、効率的な成長を促進するためにさまざまな機能が必要です。植物が健康に育つために必要な要素をサポートする水耕栽培装置には、必要な機能があります。水耕栽培チャンバーにはさまざまな種類の野菜を植えることができます。">
-                    水耕栽培は土を使わずに植物を育てる方法で、効率的な成長を促進するためにさまざまな機能が必要です。植物が健康に育つために必要な要素をサポートする水耕栽培装置には、必要な機能があります。水耕栽培チャンバーにはさまざまな種類の野菜を植えることができます。
+                <h2 ><span class="language-text ">Hydroponic cultivation</span></h2>
+                <p class="language-text " >
+                    Hydroponic cultivation is a method of growing plants without using 
+                    soil, and various features are required to promote efficient growth. There are necessary features for a 
+                    hydroponic cultivation device to support the essential elements for growing plants to be healthy. 
+                    Different variety of vegetables can be planted on the hydroponic chambers.
                 </p>
-                <p style="margin-top: 10px; font-size: 1.2rem;">* For the Philippine market</p>
-             <hr style="margin: 1em 0; border: 1px solid #e2e8f0;">
+               <p style="font-size: 1.1rem; display: flex; gap: 15px; align-items: center; margin-top: .5em;">
+                        <span>* For the Philippine market </span>
+                        <img src="Images/philippines.png">
+                </p>
+                <hr style="margin: 1em 0; border: 1px solid #e2e8f0;">
                 <i class="fa-solid fa-leaf" id="leaf-right"></i>
                 <i class="fa-solid fa-leaf" id="leaf-left" ></i>
             </div>
@@ -742,10 +752,6 @@
         //     }
         // });
 
-// アニメーション対応スライドショー機能
-
-
-
 
  document.addEventListener('DOMContentLoaded', function() {
             // Get all background slides
@@ -789,7 +795,6 @@
                 */
             }
             
-            // Initialize the background slider when page loads
             initBgSlider();
         });
 
