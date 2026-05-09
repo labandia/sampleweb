@@ -122,14 +122,15 @@ header {
     gap: 10px;
     font-size: clamp(1rem, 3vw, 1.25rem);
     font-weight: 700;
-    color: #08c0bd;
+    /* color: #08c0bd; */
+    color: #484742;
 
     text-decoration: none;
     z-index: 1001;
 }
 
 .logo span{
-    color: rgb(72, 71, 66);
+     color: #08c0bd;
 }
 
 .logo img {
