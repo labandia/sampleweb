@@ -89,6 +89,40 @@ p {
     margin-bottom: .3em;
 }
 
+.contactsub{
+    margin-bottom: 1em; font-size: 1.3rem;
+}
+
+.flex_align{
+    display: flex; 
+    align-items: center; 
+    gap: 15px;  
+}
+
+.highlighted {
+    color:#04928F;
+}
+.darkhighlighted {
+    color:#055a59 !important; 
+}
+
+.sectionbackground{
+    background-color: #fff; 
+    padding: 100px 0;
+}
+
+.backonly{
+    background-color: #f0f7f4;
+}
+
+.semibold{
+    font-weight: 600;
+}
+
+.listitems{
+    padding: 0 1em;
+}
+
 
 @media (max-width: 400px) {
     .HydroTitle{
@@ -138,6 +172,12 @@ header {
     height: auto;
 }
 
+.global-logo{
+    margin: 0 auto;
+    color: #484742;
+}
+
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -146,7 +186,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #222;
+    color: rgb(104, 104, 104);
     font-weight: 500;
     transition: var(--transition);
     padding: 8px 0;
@@ -245,6 +285,9 @@ header {
     height: 100%;
     background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
 }
+.bg-slide:nth-child(1) { background-image: url('Images/Family.png');       }
+.bg-slide:nth-child(2) { background-image: url('Images/SanyoFamily.png');  }
+.bg-slide:nth-child(3) { background-image: url('Images/Dasdsds.png');      }
 
 
 .hero {
@@ -276,6 +319,14 @@ header {
     font-size: 3.3rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content .countrytext {
+    font-size: 1.3rem; 
+    display: flex; 
+    gap: 15px; 
+    align-items: center; 
+    justify-content: center;
 }
 
 .hero-content p {
@@ -348,6 +399,14 @@ header {
     transform: translateY(-3px);
 }
 
+
+.Lineruler{
+    margin: 1em 0; border: 1px solid #e2e8f0;
+}
+
+.vegetablesplants{
+    padding-top: 1em; margin-top: 1em;
+}
 
 /* ========================================================= */
 /* ================= OFFERS SECTION ========================= */
@@ -545,6 +604,14 @@ header {
     z-index: 2;
 }
 
+.featureimage1{
+    width: 60%;
+}
+
+.featureimage2{
+    width: 40%;
+}
+
 @media (min-width: 768px) {
     .parent {
         grid-template-columns: repeat(2, 1fr);
@@ -711,9 +778,17 @@ header {
     background-color: #fff;
 }
 
+.subtitle {
+    font-weight: 500;
+}
+
 .ListProduct ul{
    list-style: none;
    margin: 1em 0;
+}
+
+.ListProduct label{
+    color: #222; font-weight: 600;
 }
 
 .ListProduct ul li{
@@ -1152,6 +1227,10 @@ footer {
     width: 40px;
     height: 3px;
     background-color: var(--primary);
+}
+
+.footer-text{
+    color: #cbd5e1; margin-bottom: 20px;
 }
 
 .footer-links {
